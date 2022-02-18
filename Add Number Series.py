@@ -1,3 +1,5 @@
+#Sum of whole numbers from 1 through N (both inclusive). Do not include numbers divisible by 3 or 7
+
 import sys
 import numpy as np
 import pandas as pd
