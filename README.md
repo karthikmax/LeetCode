@@ -1,2 +1,2 @@
 # LeetCode
-Leetcode questions solved. Includes Hackerrank and other questions
+Leetcode, Hackerrank and what not...
