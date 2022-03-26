@@ -1,0 +1,20 @@
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        intervals.sort()
+
+        #set the starting list to output. 
+        output = [intervals[0]]
+
+        #loop through all lists from intervals starting from 1.. because intervals[0] is already in output
+        for s,e in intervals[1:]:
+          #set the end value of last list in output
+          prevEnd = output[-1][1]
+          #if starting element is less than the prevEnd --> there is overlap
+          if s <= prevEnd:
+            #why max? because end value of last list in output can be greater than end value of the current list
+            output[-1][1] = max(prevEnd,e)
+          #if there is no overlap, append to the output
+          else:
+            output.append([s,e])
+            
+        return output
